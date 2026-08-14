@@ -154,7 +154,7 @@ pwd
 
 On your **local computer**, log in at [splunk.com/download](https://www.splunk.com/en_us/download/splunk-enterprise.html), choose the **Linux `.tgz`** package, and copy the `wget` command Splunk generates.
 
-![Splunk download page](screenshots/step01-splunk-download-page.png)
+![Splunk download page](step01-splunk-download-page.png)
 
 Back in your SSH session, run that command from inside `/opt/splunkinstaller` (your URL will differ):
 
@@ -163,7 +163,7 @@ wget -O splunk-10.x.x-linux-amd64.tgz \
   "https://download.splunk.com/products/splunk/releases/10.x.x/linux/splunk-10.x.x-linux-amd64.tgz"
 ```
 
-![wget download in progress](screenshots/step02-wget-download.png)
+![wget download in progress](step02-wget-download.png)
 
 Confirm the download:
 
@@ -191,7 +191,7 @@ sudo tar -xzvf /opt/splunkinstaller/splunk-10.x.x-linux-amd64.tgz -C /opt/
 | `-f` | From this file |
 | `-C /opt/` | Extract into `/opt` |
 
-![Extracting the tar archive](screenshots/step03-extract-tar.png)
+![Extracting the tar archive](step03-extract-tar.png)
 
 **2. Give ownership to the `splunk` user:**
 
@@ -205,7 +205,7 @@ chown -R splunk:splunk /opt/splunk
 ls -la /opt/ | grep splunk
 ```
 
-![Verifying ownership](screenshots/step04-verify-ownership.png)
+![Verifying ownership](step04-verify-ownership.png)
 
 > 💡 **Why this matters:** Extraction runs as root, so files start root-owned. Without this `chown`, Splunk fails to start or runs as root — defeating the dedicated account.
 
@@ -230,11 +230,11 @@ whoami
 
 Splunk shows the license, then prompts you to create an admin username and password.
 
-![Accepting the license](screenshots/step05-accept-license.png)
+![Accepting the license](step05-accept-license.png)
 
 When startup finishes, Splunk prints the web interface address — your success signal.
 
-![First start success message](screenshots/step06-first-start-success.png)
+![First start success message](step06-first-start-success.png)
 
 > 💡 Choose the admin credentials carefully — they control access to your entire Splunk instance.
 
@@ -256,7 +256,7 @@ exit
 /opt/splunk/bin/splunk enable boot-start -user splunk --accept-license --answer-yes
 ```
 
-![Enabling boot-start](screenshots/step07-enable-boot-start.png)
+![Enabling boot-start](step07-enable-boot-start.png)
 
 **3. Reload and enable the service:**
 
@@ -271,7 +271,7 @@ systemctl enable splunkd
 systemctl status splunkd
 ```
 
-![Service active and running](screenshots/step08-service-active.png)
+![Service active and running](step08-service-active.png)
 
 | Command | Action |
 |---|---|
@@ -298,7 +298,7 @@ ufw enable
 ufw status verbose
 ```
 
-![ufw firewall rules](screenshots/step09-ufw-rules.png)
+![ufw firewall rules](step09-ufw-rules.png)
 
 ### 7b. Cloud firewall (Azure NSG)
 
@@ -316,7 +316,7 @@ Azure Portal → **Network Security Groups** → your VM's NSG → **Inbound sec
 | Priority | `310` |
 | Name | `Allow-Splunk-8000` |
 
-![Azure NSG inbound rule](screenshots/step10-azure-nsg-rule.png)
+![Azure NSG inbound rule](step10-azure-nsg-rule.png)
 
 **✅ Checkpoint:** Port 8000 is allowed at both layers.
 
@@ -330,15 +330,15 @@ From your local browser:
 http://<YOUR_VM_PUBLIC_IP>:8000
 ```
 
-![Splunk login page](screenshots/step11-splunk-login.png)
+![Splunk login page](step11-splunk-login.png)
 
 Enter the admin credentials from Task 5.
 
-![Entering login credentials](screenshots/step12-login-credentials.png)
+![Entering login credentials](step12-login-credentials.png)
 
 You land on the Splunk home dashboard.
 
-![Splunk home dashboard](screenshots/step13-home-dashboard.png)
+![Splunk home dashboard](step13-home-dashboard.png)
 
 **✅ Checkpoint:** The home dashboard loads.
 
@@ -350,11 +350,11 @@ Splunk's display timezone and the server clock are two separate settings. Both m
 
 **1. Click the admin menu (top-right) → Preferences:**
 
-![Preferences menu](screenshots/step14-preferences-menu.png)
+![Preferences menu](step14-preferences-menu.png)
 
 **2. Set your time zone and click Apply:**
 
-![Timezone set](screenshots/step15-timezone-set.png)
+![Timezone set](step15-timezone-set.png)
 
 **✅ Checkpoint:** Timestamps now display in your timezone.
 
