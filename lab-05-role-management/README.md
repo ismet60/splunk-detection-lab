@@ -222,5 +222,14 @@ In this lab, you worked with **roles**, the permission groups that sit behind ev
 
 ---
 
-<sub>Author: Ismet Ara · All role and user names shown are examples created for this lab. No company data, credentials, or production infrastructure are represented.</sub>
+## 👤 Author
 
+**Nasrin Ismet**
+SOC Analyst & GRC Consultant | M.S. Cybersecurity
+
+*"Find it, prove it, govern it."*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kismetara/)
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ismet60)
+
+⭐ *Star this repo if it helped*
