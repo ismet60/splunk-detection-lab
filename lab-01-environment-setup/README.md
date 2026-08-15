@@ -267,12 +267,12 @@ df -h /             # at least 20 GB free for indexes
 
 ## 👤 Author
 
-**Ismet Ara**
+**Nasrin Ismet**
 SOC Analyst & GRC Consultant | M.S. Cybersecurity
 
-*"Where detection meets governance — building security that holds up to both attackers and auditors."*
+*"Find it, prove it, govern it."*
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR-HANDLE)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kismetara/)
 [![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ismet60)
 
 ⭐ *Star this repo if these labs helped you learn Splunk.*
