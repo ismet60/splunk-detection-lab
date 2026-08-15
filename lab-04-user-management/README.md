@@ -11,11 +11,12 @@
 
 ## 🎯 Introduction — What Is User Management?
 
-> A user account is your digital ID. It tells the system who you are and what you are allowed to do. In Splunk, user management means creating and controlling these accounts for everyone who uses Splunk.
+Every time you log into a computer, a website, or an application, you use a user account. A user account is a digital identity that tells the system who you are and what you are allowed to do. In Splunk, user management means creating and controlling these digital identities for everyone who needs to use Splunk.
+
 As a cybersecurity administrator, you must ensure: only the right people can log in, each person can only see what their job requires, and when someone leaves, their account is removed immediately.
 
 > **💡 Real-World Relevance**
-> Think of a hospital with 1000 staff. A doctor can open patient records, but a security guard cannot. Splunk is the same — a network engineer needs network logs, but a junior analyst may only need to read. Deciding who can access what is called Access Control — one of the most important parts of cybersecurity.
+> Imagine a hospital with 500 employees. A doctor should access patient records, but a security guard should not. Splunk works the same way — a network engineer needs network logs; a junior analyst may only need read-only access. Controlling who has access to what is called **Access Control** — one of the most important pillars of cybersecurity.
 
 ---
 
@@ -215,4 +216,14 @@ Cloning replicates an existing user's roles and settings — the fast way to onb
 
 ---
 
-<sub>Author: Ismet Ara · All usernames and email addresses shown are fictional examples created for this lab. No real accounts or production infrastructure are represented.</sub>
+## 👤 Author
+
+**Nasrin Ismet**
+SOC Analyst & GRC Consultant | M.S. Cybersecurity
+
+*"Find it, prove it, govern it."*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kismetara/)
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ismet60)
+
+⭐ *Star this repo if it helped*
