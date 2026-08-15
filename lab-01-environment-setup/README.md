@@ -35,6 +35,34 @@ By the end of this lab you will have a running Ubuntu 22.04 server in Azure, rea
 
 ---
 
+## 🏗️ What You're Building
+
+```
+                  Your Local Computer
+                          │
+                          │  SSH (key-based, port 22)
+                          ▼
+        ┌─────────────────────────────────────┐
+        │   Azure NSG (Cloud Firewall)        │
+        │   Inbound allow: port 22 only       │
+        └─────────────────────────────────────┘
+                          │
+                          ▼
+        ┌─────────────────────────────────────┐
+        │   Ubuntu 22.04 VM                   │
+        │   ───────────────────────────────   │
+        │   • Fully patched                   │
+        │   • Timezone configured             │
+        │   • Ready for Splunk (Lab 02)       │
+        │                                     │
+        │   Resource Group: rg-splunk-lab     │
+        └─────────────────────────────────────┘
+```
+
+This is the foundation. Every later lab in the series runs on top of this VM.
+
+---
+
 ## Concepts
 
 | Term | What it means |
@@ -237,4 +265,14 @@ df -h /             # at least 20 GB free for indexes
 
 ---
 
-<sub>All hostnames, usernames, IP addresses, and resource identifiers in this repository are placeholders. No production or client infrastructure is represented.</sub>
+## 👤 Author
+
+**Ismet Ara**
+SOC Analyst & GRC Consultant | M.S. Cybersecurity
+
+*"Where detection meets governance — building security that holds up to both attackers and auditors."*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR-HANDLE)
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ismet60)
+
+⭐ *Star this repo if these labs helped you learn Splunk.*
