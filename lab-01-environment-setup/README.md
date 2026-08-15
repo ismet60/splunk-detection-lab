@@ -275,4 +275,4 @@ SOC Analyst & GRC Consultant | M.S. Cybersecurity
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kismetara/)
 [![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ismet60)
 
-⭐ Star this repo if it helped
+⭐ *Star this repo if it helped*
