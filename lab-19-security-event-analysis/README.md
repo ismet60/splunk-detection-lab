@@ -11,9 +11,11 @@
 
 ## 🎯 Introduction — What Is Security Event Analysis?
 
-Security Event Analysis is the core work of a SOC. It means examining alerts and log data to decide whether an event is a genuine threat (**true positive**) or a false alarm (**false positive**) — and if it's real, responding to it.
+This is the real work of a SOC analyst.
 
-This lab walks through the analyst workflow in Splunk: understand the alert, gather context, examine the evidence, determine the scope, make a decision, and document it. It uses real investigation scenarios and the SPL an analyst actually writes.
+An alert fires. Your job is to answer one question: **is this a real attack, or a false alarm?** If it's real, you act. If it's not, you fix the rule so it stops crying wolf.
+
+This lab shows you how to investigate an alert in Splunk, step by step, with real searches. You read the logs, follow what happened, decide if it's a true threat, and write down what you found.
 
 ---
 
@@ -47,12 +49,12 @@ This lab walks through the analyst workflow in Splunk: understand the alert, gat
 
 After this lab, you will be able to:
 
-- Follow the analyst triage workflow in Splunk
-- Use SPL to investigate specific security events
-- Build an event timeline to understand an attack sequence
-- Tell true positives from false positives
-- Document findings in a structured format
-- Understand how Splunk Enterprise Security (ES) extends the platform
+- Follow a simple, repeatable way to check any alert
+- Write searches (SPL) to dig into a security event
+- Put events in order to see how an attack happened
+- Tell a real threat from a false alarm
+- Write down your findings clearly
+- Know what Splunk Enterprise Security (ES) adds on top
 
 ---
 
@@ -195,9 +197,7 @@ Splunk ES is the premium security tier that adds a structured analyst workflow o
 | **Adaptive Response** | Auto-actions when a notable fires: block an IP, disable an account, open a ticket |
 | **Asset & Identity** | Databases of assets and identities that enrich events with business context |
 
-![ES concept 1](screenshots/step04-es-concept-1.png)
-
-![ES concept 2](screenshots/step05-es-concept-2.png)
+![Splunk Security Essentials](screenshots/step04-es-concept-1.png)
 
 > 📌 This lab demonstrates the analyst workflow on the **standard Splunk platform** using SPL. ES automates much of it (correlation searches → notable events → risk scoring), but the underlying investigative thinking is the same — and doing it by hand in SPL is the best way to understand what ES does for you.
 
@@ -205,23 +205,23 @@ Splunk ES is the premium security tier that adds a structured analyst workflow o
 
 ## 🧠 Conclusion — What You Learned
 
-This is the SOC analyst's actual job, worked end to end.
+This is what a SOC analyst does every day.
 
-**About Investigation**
-- The six-step triage workflow applies to any alert, any tool
-- `streamstats` correlates failed-then-successful logins — the heart of brute-force detection
-- `iplocation` and impossible-travel logic surface account compromise
-- IP reputation lookups turn a suspicion into a verdict
+**Investigation**
+- The same six steps work for any alert, in any tool
+- `streamstats` finds failed logins followed by a success — the sign of a brute-force that worked
+- `iplocation` and "impossible travel" catch stolen accounts
+- An IP reputation check turns a guess into a clear answer
 
-**About Analyst Discipline**
-- True vs. false positive is a judgment call backed by evidence, not a guess
-- Documentation is part of the job — an undocumented investigation didn't happen
-- Structured findings create the audit trail an incident needs
+**Analyst habits**
+- Real or false alarm is a decision based on evidence, not a feeling
+- Always write it down — an investigation with no notes did not happen
+- Clear notes give an incident its paper trail
 
-**Why This Matters**
-- This is the single most job-relevant lab for a SOC Analyst role
-- "Walk me through how you'd investigate a brute-force alert" is a real interview question — these queries are your answer
-- Understanding the workflow by hand is what makes you effective whether or not the shop runs ES
+**Why this matters**
+- For a SOC Analyst job, this is the most important lab in the series
+- "Show me how you'd investigate a brute-force alert" is a common interview question — these searches are your answer
+- Doing it by hand makes you strong whether or not the company uses ES
 
 ---
 
@@ -252,4 +252,3 @@ SOC Analyst & GRC Consultant | M.S. Cybersecurity
 [![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ismet60)
 
 ⭐ *Star this repo if it helped*
-
